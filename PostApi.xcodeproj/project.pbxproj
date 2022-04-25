@@ -7,22 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1258F2DF28164AD900E28B42 /* PostEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258F2DD28164AD900E28B42 /* PostEntity+CoreDataClass.swift */; };
+		1258F2E028164AD900E28B42 /* PostEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258F2DE28164AD900E28B42 /* PostEntity+CoreDataProperties.swift */; };
 		1266B79F28144247006C5223 /* PostApiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B79E28144247006C5223 /* PostApiApp.swift */; };
 		1266B7A128144247006C5223 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7A028144247006C5223 /* ContentView.swift */; };
 		1266B7A328144247006C5223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1266B7A228144247006C5223 /* Assets.xcassets */; };
 		1266B7A628144247006C5223 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1266B7A528144247006C5223 /* Preview Assets.xcassets */; };
-		1266B7A828144247006C5223 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7A728144247006C5223 /* Persistence.swift */; };
+		1266B7A828144247006C5223 /* PostDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7A728144247006C5223 /* PostDataController.swift */; };
 		1266B7AB28144247006C5223 /* PostApi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7A928144247006C5223 /* PostApi.xcdatamodeld */; };
+		1266B7B72814429E006C5223 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7B62814429E006C5223 /* HomeView.swift */; };
+		1266B7BD281445A1006C5223 /* PostsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7BC281445A1006C5223 /* PostsApi.swift */; };
+		1266B7C1281445CE006C5223 /* PostServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7C0281445CE006C5223 /* PostServerModel.swift */; };
+		1266B7C328144AAA006C5223 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7C228144AAA006C5223 /* HomeViewModel.swift */; };
+		1266B7C62814505F006C5223 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7C52814505F006C5223 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1258F2DD28164AD900E28B42 /* PostEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1258F2DE28164AD900E28B42 /* PostEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1266B79B28144247006C5223 /* PostApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1266B79E28144247006C5223 /* PostApiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApiApp.swift; sourceTree = "<group>"; };
 		1266B7A028144247006C5223 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1266B7A228144247006C5223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1266B7A528144247006C5223 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1266B7A728144247006C5223 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		1266B7A728144247006C5223 /* PostDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataController.swift; sourceTree = "<group>"; };
 		1266B7AA28144247006C5223 /* PostApi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PostApi.xcdatamodel; sourceTree = "<group>"; };
+		1266B7B62814429E006C5223 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1266B7BC281445A1006C5223 /* PostsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsApi.swift; sourceTree = "<group>"; };
+		1266B7C0281445CE006C5223 /* PostServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServerModel.swift; sourceTree = "<group>"; };
+		1266B7C228144AAA006C5223 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1266B7C52814505F006C5223 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				1266B79E28144247006C5223 /* PostApiApp.swift */,
+				1266B7C428145044006C5223 /* Utilities */,
+				1266B7B32814425D006C5223 /* Networking */,
+				1266B7B228144257006C5223 /* Model */,
+				1266B7B128144253006C5223 /* Core */,
 				1266B7A028144247006C5223 /* ContentView.swift */,
 				1266B7A228144247006C5223 /* Assets.xcassets */,
-				1266B7A728144247006C5223 /* Persistence.swift */,
-				1266B7A928144247006C5223 /* PostApi.xcdatamodeld */,
 				1266B7A428144247006C5223 /* Preview Content */,
 			);
 			path = PostApi;
@@ -71,6 +87,67 @@
 				1266B7A528144247006C5223 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1266B7B128144253006C5223 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1266B7B42814428C006C5223 /* Views */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1266B7B228144257006C5223 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1266B7A928144247006C5223 /* PostApi.xcdatamodeld */,
+				1266B7BE281445B4006C5223 /* Post */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1266B7B32814425D006C5223 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1266B7BC281445A1006C5223 /* PostsApi.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1266B7B42814428C006C5223 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1266B7B528144291006C5223 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1266B7B528144291006C5223 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1266B7B62814429E006C5223 /* HomeView.swift */,
+				1266B7C228144AAA006C5223 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1266B7BE281445B4006C5223 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				1266B7C0281445CE006C5223 /* PostServerModel.swift */,
+				1266B7A728144247006C5223 /* PostDataController.swift */,
+				1258F2DD28164AD900E28B42 /* PostEntity+CoreDataClass.swift */,
+				1258F2DE28164AD900E28B42 /* PostEntity+CoreDataProperties.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		1266B7C428145044006C5223 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1266B7C52814505F006C5223 /* NetworkManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +220,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1266B7C62814505F006C5223 /* NetworkManager.swift in Sources */,
 				1266B7AB28144247006C5223 /* PostApi.xcdatamodeld in Sources */,
-				1266B7A828144247006C5223 /* Persistence.swift in Sources */,
+				1258F2E028164AD900E28B42 /* PostEntity+CoreDataProperties.swift in Sources */,
+				1258F2DF28164AD900E28B42 /* PostEntity+CoreDataClass.swift in Sources */,
+				1266B7A828144247006C5223 /* PostDataController.swift in Sources */,
+				1266B7BD281445A1006C5223 /* PostsApi.swift in Sources */,
+				1266B7C328144AAA006C5223 /* HomeViewModel.swift in Sources */,
+				1266B7C1281445CE006C5223 /* PostServerModel.swift in Sources */,
 				1266B7A128144247006C5223 /* ContentView.swift in Sources */,
+				1266B7B72814429E006C5223 /* HomeView.swift in Sources */,
 				1266B79F28144247006C5223 /* PostApiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
