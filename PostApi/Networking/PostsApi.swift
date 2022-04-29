@@ -10,7 +10,7 @@ import Combine
 
 class PostsApi{
     private var postsSubscription: AnyCancellable?
-    @Published var posts: [PostServerModel] = []
+    @Published var posts: [LocalPostModel] = []
     @Published var isLoading: Bool = false
     
     
@@ -30,8 +30,7 @@ class PostsApi{
         postsSubscription = NetworkingManager.download(url: url)
             .print("getAllPosts")
             .receive(on: DispatchQueue.main)
-            .decode(type: [PostServerModel].self, decoder: JSONDecoder())
-        
+            .decode(type: [LocalPostModel].self, decoder: JSONDecoder())
             .sink { receiveCompletion in
                 switch receiveCompletion {
                     
@@ -40,10 +39,11 @@ class PostsApi{
                     self.postsSubscription?.cancel()
                 case .failure(let error):
                     self.isLoading = false
-                    print(error.localizedDescription)
+                    
+                    debugPrint(error.localizedDescription)
                 }
             } receiveValue: { [weak self] receiveValue in
-                self?.posts = receiveValue
+                self?.posts = receiveValue                
             }
     }
 }

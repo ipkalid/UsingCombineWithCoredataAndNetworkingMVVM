@@ -20,6 +20,9 @@
 		1266B7C1281445CE006C5223 /* PostServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7C0281445CE006C5223 /* PostServerModel.swift */; };
 		1266B7C328144AAA006C5223 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7C228144AAA006C5223 /* HomeViewModel.swift */; };
 		1266B7C62814505F006C5223 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266B7C52814505F006C5223 /* NetworkManager.swift */; };
+		1297B0D4281B505900991EAD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1297B0D3281B505900991EAD /* Realm */; };
+		1297B0D6281B505900991EAD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1297B0D5281B505900991EAD /* RealmSwift */; };
+		1297B0D8281B546700991EAD /* PostDataRealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1297B0D7281B546700991EAD /* PostDataRealmController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,7 @@
 		1266B7C0281445CE006C5223 /* PostServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServerModel.swift; sourceTree = "<group>"; };
 		1266B7C228144AAA006C5223 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1266B7C52814505F006C5223 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1297B0D7281B546700991EAD /* PostDataRealmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataRealmController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1297B0D6281B505900991EAD /* RealmSwift in Frameworks */,
+				1297B0D4281B505900991EAD /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +144,7 @@
 				1266B7A728144247006C5223 /* PostDataController.swift */,
 				1258F2DD28164AD900E28B42 /* PostEntity+CoreDataClass.swift */,
 				1258F2DE28164AD900E28B42 /* PostEntity+CoreDataProperties.swift */,
+				1297B0D7281B546700991EAD /* PostDataRealmController.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -166,6 +173,10 @@
 			dependencies = (
 			);
 			name = PostApi;
+			packageProductDependencies = (
+				1297B0D3281B505900991EAD /* Realm */,
+				1297B0D5281B505900991EAD /* RealmSwift */,
+			);
 			productName = PostApi;
 			productReference = 1266B79B28144247006C5223 /* PostApi.app */;
 			productType = "com.apple.product-type.application";
@@ -194,6 +205,9 @@
 				Base,
 			);
 			mainGroup = 1266B79228144247006C5223;
+			packageReferences = (
+				1297B0D2281B505900991EAD /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 1266B79C28144247006C5223 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,6 +239,7 @@
 				1258F2E028164AD900E28B42 /* PostEntity+CoreDataProperties.swift in Sources */,
 				1258F2DF28164AD900E28B42 /* PostEntity+CoreDataClass.swift in Sources */,
 				1266B7A828144247006C5223 /* PostDataController.swift in Sources */,
+				1297B0D8281B546700991EAD /* PostDataRealmController.swift in Sources */,
 				1266B7BD281445A1006C5223 /* PostsApi.swift in Sources */,
 				1266B7C328144AAA006C5223 /* HomeViewModel.swift in Sources */,
 				1266B7C1281445CE006C5223 /* PostServerModel.swift in Sources */,
@@ -431,6 +446,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1297B0D2281B505900991EAD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1297B0D3281B505900991EAD /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1297B0D2281B505900991EAD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		1297B0D5281B505900991EAD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1297B0D2281B505900991EAD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1266B7A928144247006C5223 /* PostApi.xcdatamodeld */ = {

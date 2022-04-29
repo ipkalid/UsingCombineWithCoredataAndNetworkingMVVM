@@ -8,42 +8,38 @@
 
 import Foundation
 import CoreData
+import RealmSwift
+ 
+ 
+class LocalPostModel: Object,Codable, Identifiable {
+    @Persisted(primaryKey: true) var id: Int
+    @Persisted var userID: Int
+    @Persisted var title: String?
+    @Persisted var body: String?
+    
+//    convenience init(userID: Int, id: Int, title: String, body: String) {
+//        self.init()
+////        self.userID = userID
+////        self.id = id
+////        self.title = title
+////        self.body = body
+//    }
+    
+    enum CodingKeys: String, CodingKey {
+        case userID = "userId"
+        case id, title, body
+    }
 
-extension CodingUserInfoKey {
-  static let managedObjectContext = CodingUserInfoKey(rawValue: "managedObjectContext")!
 }
 
-enum DecoderConfigurationError: Error {
-  case missingManagedObjectContext
-}
+//var x = LocalPostData(
 
 
-public class PostEntity: NSManagedObject, Decodable {
-    enum CodingKeys: CodingKey {
-        case completionDate
-    }
+
+
+
+public class PostEntity: NSManagedObject {
     
-    
-    public required convenience  init(from decoder: Decoder) throws {
-        enum CodingKeys: String, CodingKey {
-            case userID = "userId"
-            case id, title, body
-        }
-        
-        
-        guard let context = decoder.userInfo[CodingUserInfoKey.managedObjectContext] as? NSManagedObjectContext else {
-            throw DecoderConfigurationError.missingManagedObjectContext
-        }
-        
-        self.init(context: context)
-        
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int64.self, forKey: CodingKeys.id)
-        self.userID = try container.decode(Int64.self, forKey: CodingKeys.userID)
-        self.body = try container.decode(String.self, forKey: CodingKeys.body)
-        self.title = try container.decode(String.self, forKey: CodingKeys.title)
-        
-    }
 }
 
 

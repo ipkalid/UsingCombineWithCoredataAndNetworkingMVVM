@@ -11,16 +11,18 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var vm = HomeViewModel()
     var body: some View {
-        
-        VStack{
-            if vm.isLoading{
+        VStack {
+            if vm.isLoading {
                 ProgressView()
-            }
-            else{
-                
+            } else {
                 List {
-                    ForEach(vm.posts){
-                        Text($0.title)
+                    ForEach(vm.posts) { post in
+
+                        HStack {
+                            Text("\(post.id). ")
+                                .fontWeight(.bold)
+                            Text(post.title ?? "")
+                        }
                     }
                 }
                 .refreshable {
@@ -30,7 +32,6 @@ struct HomeView: View {
         }
         .navigationTitle("\(vm.posts.count)")
         .navigationBarTitleDisplayMode(.inline)
-      
     }
 }
 

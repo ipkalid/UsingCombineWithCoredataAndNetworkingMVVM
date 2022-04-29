@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 class HomeViewModel:ObservableObject{
-    @Published var posts :[PostEntity] = [PostEntity]()
+    @Published var posts :[LocalPostModel] = [LocalPostModel]()
     @Published var isLoading = false
     
     
@@ -24,7 +24,7 @@ class HomeViewModel:ObservableObject{
     
     private func addSubscripers(){
         
-        PostDataController.shared.$savedPosts
+        PostDataRealmController.shared.$savedPosts
             .sink(receiveValue: { [weak self] receiveValue in
                 self?.posts = receiveValue
             })
